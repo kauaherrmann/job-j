@@ -46,6 +46,14 @@
             </a>
           </li>
 
+          <!-- Menu Item: Calendário -->
+          <li class="nav-item">
+            <a href="/Calendario/c-pag-principal.html" class="nav-link py-3">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="nav-text">Calendário</span>
+            </a>
+          </li>
+
           <!-- Menu Item: Financeiro -->
           <li class="nav-item">
             <a href="/Financeiro/f-pag-principal.html" class="nav-link py-3">
@@ -69,18 +77,22 @@
         <div class="container my-4">
           <h2 class="mb-4">Lista de Clientes</h2>
 
-          <!-- Botão para abrir o Modal -->
-<button id="addClienteBtn" class="btn btn-primary custom-btn" data-bs-toggle="modal" data-bs-target="#clienteModal">
+          <!-- Botão para abrir o Modal cadastro -->
+<button id="addClienteBtn" class="btn btn-primary  custom-btn" data-bs-toggle="modal" data-bs-target="#clienteModal">
   <i class="fas fa-plus"></i> Adicionar Cliente
 </button> 
+          <!-- Botão para abrir o Modal criar consulta -->
+          <button id="addClienteBtn" class="btn btn-primary custom-btn" data-bs-toggle="modal" data-bs-target="#criarConsulta">
+            <i class="fas fa-plus"></i> Criar Consulta
+          </button> 
 
-<!-- Modal de Cadastro de Cliente -->
+<!--------- Cadastro de Cliente --------->
 <div class="modal fade" id="clienteModal" tabindex="-1" aria-labelledby="clienteModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="clienteModalLabel">Cadastro de Cliente</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" style="color: rgb(166, 130, 138);" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form id="formCadastroCliente">
@@ -160,7 +172,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelarClienteBtn" >Cancelar</button>
         <button type="button" class="btn btn-primary" id="salvarClienteBtn">Salvar</button>
       </div>
     </div>

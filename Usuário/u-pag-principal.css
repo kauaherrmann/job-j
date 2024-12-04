@@ -224,41 +224,138 @@ body {
 
 /*--------------------------- FIM ----------------------------*/
 
-/*--------------cadastro do cliente------------------*/
-/* Cor de fundo e texto do botão de Cancelar */
-#cancelarBtn {
-  background-color: rgb(23, 23, 23);  /* Vermelho */
-  color: white;  /* Texto branco */
+/*--------------Cadastro de Cliente - Estilo Ajustado--------------*/
+
+/* Botão de Cancelar */
+#cancelarClienteBtn {
+  background-color: rgb(53, 34, 34); /* Cor de fundo escura */
+  color: rgb(214, 169, 178); /* Texto rosa claro */
+  border: none; /* Remove borda padrão */
+  border-radius: 4px; /* Borda arredondada */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Cor de fundo e texto do botão de Salvar */
+#cancelarClienteBtn:hover {
+  background-color: rgb(128, 2, 2); /* Cinza escuro */
+}
+
+/* Botão de Salvar */
 #salvarClienteBtn {
-  background-color: rgb(23, 23, 23);  /* Verde */
-  color: white;  /* Texto branco */
+  background-color: rgb(73, 54, 58); /* Cor de fundo escura */
+  color: rgb(214, 169, 178); /* Texto rosa claro */
+  border: none; /* Remove borda padrão */
+  border-radius: 4px; /* Borda arredondada */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#salvarClienteBtn:hover {
+  background-color: rgb(166, 130, 138); /* Rosa mais forte */
 }
 
 /* Tornar o modal estático e remover rolagem */
 .modal-lg {
-  max-width: 70%; /* Ajusta a largura conforme necessário */
+  max-width: 70%; /* Ajusta a largura */
 }
 
 .modal-content {
-  height: 90vh; /* Define a altura do modal como 90% da altura da tela */
-  overflow: hidden; /* Remove a rolagem */
+  height: 90vh; /* Define a altura do modal como 90% da tela */
+  background-color: rgb(23, 23, 23); /* Cor de fundo do modal */
+  color: rgb(214, 169, 178); /* Texto branco */
+  border-radius: 8px; /* Borda arredondada */
+  overflow: hidden; /* Remove rolagem externa */
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao modal */
+}
+
+/* Cabeçalho do modal */
+.modal-header {
+  background-color: rgb(23, 23, 23); /* Fundo escuro */
+  border-bottom: 1px solid rgb(32, 32, 32); /* Linha de divisão */
+  padding: 20px;
+}
+
+.modal-header .modal-title {
+  color: rgb(214, 169, 178); /* Rosa claro */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-header .btn-close {
+  color: rgb(214, 169, 178); /* Ícone de fechar branco */
 }
 
 /* Corpo do modal com margem inferior para os botões */
 .modal-body {
-  flex-grow: 1; /* Permite que o corpo do modal cresça para ocupar o espaço disponível */
-  overflow: auto; /* Permite que o conteúdo dentro do corpo role, mas não o modal inteiro */
-  padding-bottom: 60px; /* Adiciona espaço para os botões */
+  flex-grow: 1;
+  overflow-y: auto; /* Habilita rolagem interna */
+  padding: 20px;
+  background-color: rgb(23, 23, 23); /* Fundo do corpo */
+}
+
+/* Campos do formulário */
+.modal-body .form-label {
+  color: rgb(214, 169, 178); /* Rosa claro para labels */
+  font-weight: bold;
+}
+
+.modal-body .form-control {
+  background-color: rgb(32, 32, 32); /* Fundo dos inputs */
+  color: rgb(214, 169, 178); /* Texto branco */
+  border: 1px solid rgb(23, 23, 23); /* Bordas cinza escuro */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+.modal-body .form-control:focus {
+  border-color: rgb(214, 169, 178); /* Rosa claro no foco */
+  box-shadow: 0 0 1px rgb(166, 130, 138);
 }
 
 /* Rodapé fixo na parte inferior */
 .modal-footer {
-  flex-shrink: 0; /* Garante que o footer não diminua de tamanho */
-  padding-top: 20px; /* Adiciona espaçamento acima dos botões */
-  position: relative;
+  flex-shrink: 0;
+  padding: 20px;
+  border-top: 1px solid rgb(32, 32, 32); /* Linha de divisão */
+  background-color: rgb(23, 23, 23); /* Fundo escuro */
 }
+/* Estiliza a barra de rolagem no modal */
+.modal-body::-webkit-scrollbar {
+  width: 10px; /* Largura da barra */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 169, 178); /* Cor do "polegar" (parte rolável) */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(166, 130, 138); /* Cor no hover */
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background-color: rgb(32, 32, 32); /* Cor do "trilho" (fundo da scrollbar) */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilizar a cor do botão de fechar */
+.btn-close {
+  background-color: transparent; /* Remove o fundo padrão */
+  filter: invert(30%) sepia(25%) saturate(150%) hue-rotate(350deg) brightness(120%) contrast(100%);
+  /* Ajusta o filtro para um tom de rosa claro */
+}
+
+/* Alterar a cor ao passar o mouse */
+.btn-close:hover {
+  filter: invert(30%) sepia(25%) saturate(150%) hue-rotate(350deg) brightness(110%) contrast(100%);
+  /* Torna a cor mais escura no hover */
+  transition: filter 0.3s ease; /* Transição suave */
+}
+
+
+
+
+
+
+
+
+

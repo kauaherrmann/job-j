@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Calendário</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -18,20 +18,21 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/Calendario/c-pag-principal.css" />
   </head>
   <body>
     <div class="d-flex">
       <!-- Sidebar -->
       <nav id="sidebar" class="bg-light">
         <div class="logo-container">
-          <img src="/IMGs/logotipo-jm.PNG" alt="Logo" class="logo" />
+          <a href="/index.html">
+            <img src="/IMGs/logotipo-jm.PNG" alt="Logo" class="logo" /></a>
         </div>
 
         <ul class="nav flex-column">
           <!-- Menu Item: Início -->
           <li class="nav-item">
-            <a class="nav-link active py-3">
+            <a href="/index.html" class="nav-link py-3">
               <i class="fas fa-home"></i>
               <span class="nav-text">Home</span>
             </a>
@@ -40,15 +41,15 @@
           <!-- Menu Item: Clientes -->
           <li class="nav-item">
             <a href="/Usuário/u-pag-principal.html" class="nav-link py-3">
-              <i class="fa-solid fa-user-tie"></i>
+              <i class="fas fa-users"></i>
               <span class="nav-text">Usuário</span>
             </a>
           </li>
 
           <!-- Menu Item: Calendário -->
           <li class="nav-item">
-            <a href="/Calendario/c-pag-principal.html" class="nav-link py-3">
-              <i class="fa-regular fa-calendar"></i>
+            <a href="#" class="nav-link active py-3">
+                <i class="fa-regular fa-calendar"></i>
               <span class="nav-text">Calendário</span>
             </a>
           </li>
@@ -56,8 +57,7 @@
           <!-- Menu Item: Financeiro -->
           <li class="nav-item">
             <a href="/Financeiro/f-pag-principal.html" class="nav-link py-3">
-              <i class="fa-solid fa-file-invoice-dollar"></i>
-              
+              <i class="fas fa-dollar-sign"></i>
               <span class="nav-text">Financeiro</span>
             </a>
           </li>
@@ -65,7 +65,7 @@
           <!-- Menu Item: Relatórios -->
           <li class="nav-item">
             <a href="/Materiais/m-pag-principal.html" class="nav-link py-3">
-              <i class="fa-solid fa-box"></i>
+              <i class="fas fa-chart-line"></i>
               <span class="nav-text">Materiais</span>
             </a>
           </li>
