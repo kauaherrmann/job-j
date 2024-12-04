@@ -152,12 +152,13 @@ body {
   color: rgb(214, 169, 178);
 }
 .accordion-body img {
-  width: 100%; /* Ajusta a largura da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 8px; /* Borda arredondada para a imagem */
-  object-fit: cover; /* Garante que a imagem ocupe o espaço sem distorcer */
+  width: 100%; /* Ajusta a largura da imagem para ocupar todo o container */
+  max-width: 115px; /* Define um limite máximo de largura */
+  height: 115px; /* Define uma altura fixa */
+  object-fit: cover; /* Corta a imagem se necessário para preencher o espaço sem distorção */
+  border-radius: 50%; /* Borda arredondada para a imagem */
+  margin-left: 30px;
 }
-
 
 .client-info {
   padding: 0.5rem 0;
@@ -199,7 +200,9 @@ body {
   outline: none; /* Remove o contorno padrão */
   box-shadow: none; /* Remove qualquer sombra no contorno */
   margin-bottom: 5px;
+  border-radius: 5px; /* Ajuste o valor para o arredondamento desejado */
 }
+
 
 /* Estilo ao passar o mouse */
 .custom-btn:hover {
