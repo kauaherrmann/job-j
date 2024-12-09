@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -321,83 +325,89 @@
     
       // Função para adicionar um novo cliente ao accordion
       document.getElementById('salvarClienteBtn').addEventListener('click', function () {
-        // Obtenha os dados do formulário
-        const nome = document.getElementById('nomeCliente').value;
-        const cpf = document.getElementById('cpfCliente').value;
-        const email = document.getElementById('emailCliente').value;
-        const dataNascimento = document.getElementById('dataNascimento').value;
-        const parentesco = document.getElementById('parentescoCliente').value;
-        const numeroParentesco = document.getElementById('numeroParentesco').value;
-        const remedioContinuo = remedioContinuoCheckbox.checked;
-        const remedioNome = remedioContinuo ? document.getElementById('nomeRemedio').value : '';
-        const remedioDescricao = remedioContinuo ? document.getElementById('descricaoRemedio').value : '';
-        const problemasSaude = problemasSaudeCheckbox.checked;
-        const problemasSaudeDescricao = problemasSaude ? document.getElementById('problemasSaude').value : '';
-        const alergiaDoenca = alergiaDoencaCheckbox.checked;
-        const alergiaDoencaDescricao = alergiaDoenca ? document.getElementById('alergiaDoenca').value : '';
-    
-        // Crie um novo ID único para o accordion
-        const id = new Date().getTime();
-        const headingId = 'heading' + id;
-        const collapseId = 'collapse' + id;
-    
-        // Crie o novo HTML do item do accordion
-        const newAccordionItem = `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="${headingId}">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#${collapseId}"
-                aria-expanded="false"
-                aria-controls="${collapseId}"
-              >
-                <div class="d-flex justify-content-between align-items-center w-100">
-                  <div class="client-info"><strong>Nome:</strong> ${nome}</div>
-                  <div class="client-info"><strong>Email:</strong> ${email}</div>
-                  <div class="client-info"><strong>CPF:</strong> ${cpf}</div>
-                </div>
-              </button>
-            </h2>
-            <div
-              id="${collapseId}"
-              class="accordion-collapse collapse"
-              aria-labelledby="${headingId}"
-              data-bs-parent="#accordionClientes"
-            >
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img src="${imagemPreviewImg.src}" alt="Imagem do Cliente" class="img-fluid" />
-                  </div>
-                  <div class="col-md-4">
-                    <p><strong>Data de Nascimento:</strong> ${dataNascimento}</p>
-                    <p><strong>Nome de Parentesco:</strong> ${parentesco}</p>
-                    <p><strong>Número de Parentesco:</strong> ${numeroParentesco}</p>
-                  </div>
-                  <div class="col-md-4">
-                    <p><strong>Remédio Contínuo:</strong> ${remedioContinuo ? 'Sim - ' + remedioNome + ' (' + remedioDescricao + ')' : 'Não'}</p>
-                    <p><strong>Problemas de Saúde:</strong> ${problemasSaude ? 'Sim - ' + problemasSaudeDescricao : 'Não'}</p>
-                    <p><strong>Alergia ou Doença:</strong> ${alergiaDoenca ? 'Sim - ' + alergiaDoencaDescricao : 'Não'}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  // Obtenha os dados do formulário
+  const nome = document.getElementById('nomeCliente').value;
+  const cpf = document.getElementById('cpfCliente').value;
+  const email = document.getElementById('emailCliente').value;
+  const dataNascimento = document.getElementById('dataNascimento').value;
+  const parentesco = document.getElementById('parentescoCliente').value;
+  const numeroParentesco = document.getElementById('numeroParentesco').value;
+  const remedioContinuo = remedioContinuoCheckbox.checked;
+  const remedioNome = remedioContinuo ? document.getElementById('nomeRemedio').value : '';
+  const remedioDescricao = remedioContinuo ? document.getElementById('descricaoRemedio').value : '';
+  const problemasSaude = problemasSaudeCheckbox.checked;
+  const problemasSaudeDescricao = problemasSaude ? document.getElementById('problemasSaude').value : '';
+  const alergiaDoenca = alergiaDoencaCheckbox.checked;
+  const alergiaDoencaDescricao = alergiaDoenca ? document.getElementById('alergiaDoenca').value : '';
+
+  // Crie um novo ID único para o accordion
+  const id = new Date().getTime();
+  const headingId = 'heading' + id;
+  const collapseId = 'collapse' + id;
+
+  // Crie o novo HTML do item do accordion
+const newAccordionItem = `
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="${headingId}">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#${collapseId}"
+        aria-expanded="false"
+        aria-controls="${collapseId}"
+      >
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="client-info"><strong>Nome:</strong> ${nome}</div>
+          <div class="client-info"><strong>Email:</strong> ${email}</div>
+          <div class="client-info"><strong>CPF:</strong> ${cpf}</div>
+        </div>
+      </button>
+    </h2>
+    <div
+      id="${collapseId}"
+      class="accordion-collapse collapse"
+      aria-labelledby="${headingId}"
+      data-bs-parent="#accordionClientes"
+    >
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="${imagemPreviewImg.src}" alt="Imagem do Cliente" class="img-fluid" />
           </div>
-        `;
-    
-        // Adicione o novo item ao final do accordion
-        document.getElementById('accordionClientes').insertAdjacentHTML('beforeend', newAccordionItem);
-    
-        // Feche o modal
-        const modal = bootstrap.Modal.getInstance(document.getElementById('clienteModal'));
-        modal.hide();
-    
-        // Limpar o formulário após salvar
-        document.getElementById('formCadastroCliente').reset();
-        imagemPreview.style.display = 'none';
-      });
+          <div class="col-md-4">
+            <p><strong>Data de Nascimento:</strong> ${dataNascimento}</p>
+            <p><strong>Nome de Parentesco:</strong> ${parentesco}</p>
+            <p><strong>Número de Parentesco:</strong> ${numeroParentesco}</p>
+          </div>
+          <div class="col-md-4">
+            <p><strong>Remédio Contínuo:</strong> ${remedioContinuo ? 'Sim - ' + remedioNome + ' (' + remedioDescricao + ')' : 'Não'}</p>
+            <p><strong>Problemas de Saúde:</strong> ${problemasSaude ? 'Sim - ' + problemasSaudeDescricao : 'Não'}</p>
+            <p><strong>Alergia ou Doença:</strong> ${alergiaDoenca ? 'Sim - ' + alergiaDoencaDescricao : 'Não'}</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+          <i class="fa fa-pen me-3 btn-edit" title="Editar"></i>
+          <i class="fa fa-trash text-danger btn-delete" title="Excluir"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+
+  // Adicione o novo item ao final do accordion
+  document.getElementById('accordionClientes').insertAdjacentHTML('beforeend', newAccordionItem);
+
+  // Feche o modal
+  const modal = bootstrap.Modal.getInstance(document.getElementById('clienteModal'));
+  modal.hide();
+
+  // Limpar o formulário após salvar
+  document.getElementById('formCadastroCliente').reset();
+  imagemPreview.style.display = 'none';
+});
+
     </script>
     
     

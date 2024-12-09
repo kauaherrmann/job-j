@@ -228,20 +228,20 @@ body {
 
 /* Botão de Cancelar */
 #cancelarClienteBtn {
-  background-color: rgb(53, 34, 34); /* Cor de fundo escura */
+  background-color: rgb(23, 23, 23); /* Cor de fundo escura */
   color: rgb(214, 169, 178); /* Texto rosa claro */
-  border: none; /* Remove borda padrão */
+  border: white !important; /* Remove borda padrão */
   border-radius: 4px; /* Borda arredondada */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #cancelarClienteBtn:hover {
-  background-color: rgb(128, 2, 2); /* Cinza escuro */
+  background-color: rgb(32, 32, 32); /* Cinza escuro */
 }
 
 /* Botão de Salvar */
 #salvarClienteBtn {
-  background-color: rgb(73, 54, 58); /* Cor de fundo escura */
+  background-color: rgb(37, 37, 37); /* Cor de fundo escura */
   color: rgb(214, 169, 178); /* Texto rosa claro */
   border: none; /* Remove borda padrão */
   border-radius: 4px; /* Borda arredondada */
@@ -249,7 +249,8 @@ body {
 }
 
 #salvarClienteBtn:hover {
-  background-color: rgb(166, 130, 138); /* Rosa mais forte */
+  background-color: rgb(214, 169, 178); /* Rosa mais forte */
+  color: black;
 }
 
 /* Tornar o modal estático e remover rolagem */
@@ -320,7 +321,7 @@ body {
 }
 /* Estiliza a barra de rolagem no modal */
 .modal-body::-webkit-scrollbar {
-  width: 10px; /* Largura da barra */
+  width: 5px; /* Largura da barra */
 }
 
 .modal-body::-webkit-scrollbar-thumb {
@@ -351,6 +352,30 @@ body {
   transition: filter 0.3s ease; /* Transição suave */
 }
 
+/*--- ICONES DE EDIÇÂO E EXCLUSÂO ---*/
+/* Estilo para o botão de edição */
+.btn-edit {
+  color: rgb(214, 169, 178); /* Azul padrão */
+  font-size: 1.2rem; /* Tamanho maior */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  color: rgb(155, 121, 129); /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilo para o botão de exclusão */
+.btn-delete {
+  color: rgb(214, 169, 178) !important; /* Vermelho padrão */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  color: #7a262f !important; /* Vermelho mais escuro ao passar o mouse */
+}
 
 
 
