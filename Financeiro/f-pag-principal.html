@@ -76,7 +76,7 @@
       <div class="main-content flex-grow-1 p-3">
         <!-- Cards Section -->
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-6 mb-6">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Receita Total</h5>
@@ -84,7 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-6 mb-6">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Despesas</h5>
@@ -92,15 +92,32 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Lucro</h5>
-                <p class="card-text">R$ 15.000,00</p>
+        </div>
+
+        <!-- segundo andar de cards -->
+        <div class="row">
+          <div class="col-md-6 mb-6">
+            <div class="card2">
+              <div class="card-body2">
+                <h5 class="card-title2">Receita Total</h5>
+                <p class="card-text2">R$ 20.000,00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-6">
+            <div class="card2">
+              <div class="card-body2">
+                <h5 class="card-title2">Despesas</h5>
+                <p class="card-text2">R$ 5.000,00</p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Botão para abrir o Modal criar consulta -->
+        <button id="addClienteBtn" class="btn btn-primary custom-btn" data-bs-toggle="modal" data-bs-target="#criarConsulta">
+          <i class="fas fa-plus"></i> Criar Comprovante
+        </button> 
       </div>
     </div>
   </body>
