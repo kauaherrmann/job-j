@@ -135,105 +135,20 @@ body {
 
 /*-------------Estilo cards-----------------*/
 /* Estilo para os cards de valores */
-.card {
-  margin: 0 5px; /* Adiciona margem lateral para os cards */
+.card, .card2 {
+  margin: 0 3px; /* Adiciona margem lateral para os cards */
   border: none; /* Remove a borda padrão */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transições suaves */
-  margin-top: 5px; /* Reduz a margem superior para diminuir a distância entre os cards */
+  margin-top: 6px; /* Reduz a margem superior para diminuir a distância entre os cards */
 }
 
 /* Estilo para o corpo dos cards */
-.card-body {
+.card-body, .card-body2 {
   padding: 40px; /* Adiciona espaçamento interno */
   background-color: rgb(23, 23, 23); /* Define a cor de fundo */
   border-radius: 8px;
-}
-
-/* Ajuste para garantir que os cards fiquem lado a lado */
-.row {
-  margin-left: -5px; /* Ajusta a margem negativa para compensar a margem dos cards */
-  margin-right: -5px; /* Ajusta a margem negativa para compensar a margem dos cards */
-}
-
-/* Estilo para o título dos cards */
-.card-title {
-  font-size: 1.25rem; /* Define o tamanho da fonte */
-  font-weight: bold; /* Define o peso da fonte */
-  color: rgb(214, 169, 178); /* Define a cor do texto */
-}
-
-/* Estilo para o texto dos cards */
-.card-text {
-  font-size: 1rem; /* Define o tamanho da fonte */
-  color: rgb(166, 130, 138); /* Define a cor do texto */
-}
-
-#sidebar {
-  width: 180px;
-  position: fixed;
-  height: 100vh;
-}
-.main-content {
-  margin-left: 180px; /* Espaço para o menu lateral */
-  padding: 20px;
-}
-/* Estilo para os cards de valores */
-.card-container {
-  margin: 0 10px; /* Diminui a margem lateral para reduzir o vão entre os cards */
-}
-
-/*-------------Estilo cards 2 -----------------*/
-
-/* Estilo para os cards de valores (segundo andar) */
-.card2 {
-  margin: 0 5px; /* Adiciona margem lateral para os cards */
-  border: none; /* Remove a borda padrão */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transições suaves */
-  margin-top: 5px; /* Reduz a margem superior para diminuir a distância entre os cards */
-}
-
-/* Estilo para o corpo dos cards */
-.card-body2 {
-  padding: 40px; /* Adiciona espaçamento interno */
-  background-color: rgb(23, 23, 23); /* Define a cor de fundo */
-  border-radius: 8px;
-}
-
-/* Ajuste para garantir que os cards fiquem lado a lado */
-.row {
-  margin-left: -5px; /* Ajusta a margem negativa para compensar a margem dos cards */
-  margin-right: -5px; /* Ajusta a margem negativa para compensar a margem dos cards */
-}
-
-/* Estilo para o título dos cards */
-.card-title2 {
-  font-size: 1.25rem; /* Define o tamanho da fonte */
-  font-weight: bold; /* Define o peso da fonte */
-  color: rgb(214, 169, 178); /* Define a cor do texto */
-}
-
-/* Estilo para o texto dos cards */
-.card-text2 {
-  font-size: 1rem; /* Define o tamanho da fonte */
-  color: rgb(166, 130, 138); /* Define a cor do texto */
-}
-
-#sidebar {
-  width: 180px;
-  position: fixed;
-  height: 100vh;
-}
-.main-content {
-  margin-left: 180px; /* Espaço para o menu lateral */
-  padding: 20px;
-}
-/* Estilo para os cards de valores */
-.card2-container {
-  margin: 0 10px; /* Diminui a margem lateral para reduzir o vão entre os cards */
 }
 
 /* Ajuste para garantir que os cards fiquem lado a lado */
@@ -249,7 +164,21 @@ body {
   padding-top: 2px; /* Reduz o espaço acima das colunas */
   padding-bottom: 2px; /* Reduz o espaço abaixo das colunas */
 }
-/*---------- BOTÃO DE ADICIONAR ------------*/
+
+/* Estilo para o título dos cards */
+.card-title, .card-title2 {
+  font-size: 1.25rem; /* Define o tamanho da fonte */
+  font-weight: bold; /* Define o peso da fonte */
+  color: rgb(214, 169, 178); /* Define a cor do texto */
+}
+
+/* Estilo para o texto dos cards */
+.card-text, .card-text2 {
+  font-size: 1rem; /* Define o tamanho da fonte */
+  color: rgb(166, 130, 138); /* Define a cor do texto */
+}
+
+/*---------- BOTÃO DE Criar comprovante ------------*/
 .custom-btn {
   background-color: rgb(23, 23, 23); /* Cor de fundo personalizada */
   color: rgb(214, 169, 178); /* Cor do texto personalizada */
@@ -281,3 +210,34 @@ body {
 }
 
 /*--------------------------- FIM ----------------------------*/
+
+/*---------- Lista de Comprovantes ----------*/
+.list-group-item {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens do lado esquerdo para o direito */
+  align-items: center; /* Alinha os itens verticalmente */
+  width: 100%; /* Garante que ocupe toda a largura */
+  padding: 1rem;
+  background-color: rgb(23, 23, 23);
+  border: none; /* Remover borda padrão, se necessário */
+  color: rgb(214, 169, 178);
+  margin-bottom: 3px; /* Espaço entre os itens da lista */
+  border-radius: 5px; /* Borda arredondada */
+  padding: 10px;
+}
+
+.client-info {
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  text-align: left;
+  flex-grow: 1;
+  color: rgb(166, 130, 138); /* Cor do texto personalizada */
+}
+
+.list-group-item .client-info {
+  display: flex;
+  justify-content: center; /* Centraliza os textos dentro da área do item */
+  width: 100%; /* Garante que ocupe a largura do item */
+  margin-left: 1px; /* Ajuste esse valor conforme necessário */
+  gap: 7px; /* Distância entre resposta e dois pontos */
+}
