@@ -241,3 +241,86 @@ body {
   margin-left: 1px; /* Ajuste esse valor conforme necessário */
   gap: 7px; /* Distância entre resposta e dois pontos */
 }
+
+/* Scroll*/
+.list-group {
+  max-height: 300px; /* Define a altura máxima da lista */
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+}
+
+/* Personalização da barra de rolagem */
+.list-group::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+.list-group::-webkit-scrollbar-track {
+  background: rgb(32, 32, 32); /* Cor do trilho da barra de rolagem */
+  border-radius: 10px; /* Borda arredondada do trilho */
+}
+
+.list-group::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 169, 178); /* Cor da barra de rolagem */
+  border-radius: 10px; /* Borda arredondada da barra */
+  border: 2px solid rgb(32, 32, 32); /* Borda ao redor da barra */
+}
+
+/* Personalização da barra de rolagem para navegadores que não suportam Webkit */
+.list-group {
+  scrollbar-width: thin; /* Largura da barra de rolagem */
+  scrollbar-color: rgb(23, 23, 23) rgb(230,228,241); /* Cor da barra e do trilho */
+}
+
+/*--------------------------- MODAL (CRIAR COMPROVANTE) ----------------------- */
+.modal-content {
+  background-color: rgb(23, 23, 23); /* Cor de fundo do modal */
+  color: rgb(214, 169, 178); /* Cor do texto do modal */
+  border-radius: 8px; /* Borda arredondada do modal */
+  border: none; /* Remove a borda padrão */
+}
+
+/* Estilo para o cabeçalho do modal */
+.modal-header {
+  border-bottom: 1px solid rgb(32, 32, 32); /* Cor da borda inferior do cabeçalho */
+}
+
+.modal-title {
+  color: rgb(214, 169, 178); /* Cor do título do modal */
+}
+
+.btn-close {
+  color: rgb(214, 169, 178); /* Cor do botão de fechar */
+}
+
+/* Estilo para o corpo do modal */
+.modal-body {
+  background-color: rgb(23, 23, 23); /* Cor de fundo do corpo do modal */
+  color: rgb(214, 169, 178); /* Cor do texto do corpo do modal */
+}
+
+/* Estilo para o rodapé do modal */
+.modal-footer {
+  border-top: 1px solid rgb(32, 32, 32); /* Cor da borda superior do rodapé */
+}
+
+/* Estilo para os botões do modal */
+.modal-footer .btn-primary {
+  background-color: rgb(32, 32, 32); /* Cor de fundo do botão */
+  border-color: rgb(32, 32, 32); /* Cor da borda do botão */
+  color: rgb(214, 169, 178); /* Cor do texto do botão */
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: rgb(37, 37, 37); /* Cor de fundo do botão ao passar o mouse */
+  border-color: rgb(37, 37, 37); /* Cor da borda do botão ao passar o mouse */
+}
+
+.modal-footer .btn-secondary {
+  background-color: rgb(23, 23, 23); /* Cor de fundo do botão secundário */
+  border-color: rgb(23, 23, 23); /* Cor da borda do botão secundário */
+  color: rgb(214, 169, 178); /* Cor do texto do botão secundário */
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: rgb(32, 32, 32); /* Cor de fundo do botão secundário ao passar o mouse */
+  border-color: rgb(32, 32, 32); /* Cor da borda do botão secundário ao passar o mouse */
+}
