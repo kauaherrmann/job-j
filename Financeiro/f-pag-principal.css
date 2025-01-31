@@ -287,8 +287,44 @@ body {
   color: rgb(214, 169, 178); /* Cor do título do modal */
 }
 
-.btn-close {
-  color: rgb(214, 169, 178); /* Cor do botão de fechar */
+.modal-header .btn-close {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: rgb(214, 169, 178) !important; /* Cor do botão de fechar */
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Remove a borda */
+  opacity: 1; /* Garante que o botão esteja visível */
+  outline: none; /* Remove o estilo de foco */
+}
+
+.modal-header .btn-close:focus {
+  outline: none; /* Remove o estilo de foco ao clicar */
+}
+
+.modal-header .btn-close::before,
+.modal-header .btn-close::after {
+  content: ' ';
+  position: absolute;
+  top: 0.5em;
+  left: 0.1em;
+  width: 1em;
+  height: 0.1em;
+  background-color: rgb(214, 169, 178) !important; /* Cor do botão de fechar */
+}
+
+.modal-header .btn-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-header .btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-header .btn-close:hover::before,
+.modal-header .btn-close:hover::after {
+  background-color: rgb(166, 130, 138) !important; /* Cor do botão de fechar ao passar o mouse */
 }
 
 /* Estilo para o corpo do modal */
@@ -323,4 +359,15 @@ body {
 .modal-footer .btn-secondary:hover {
   background-color: rgb(32, 32, 32); /* Cor de fundo do botão secundário ao passar o mouse */
   border-color: rgb(32, 32, 32); /* Cor da borda do botão secundário ao passar o mouse */
+}
+
+/* Estilo para os campos de entrada dentro do modal */
+.modal-body input,
+.modal-body textarea,
+.modal-body select {
+  background-color: rgb(32, 32, 32); /* Cor de fundo dos campos de entrada */
+  color: rgb(214, 169, 178); /* Cor do texto dos campos de entrada */
+  border: 1px solid rgb(37, 37, 37); /* Cor da borda dos campos de entrada */
+  border-radius: 4px; /* Borda arredondada dos campos de entrada */
+  padding: 10px; /* Espaçamento interno dos campos de entrada */
 }
